@@ -4,7 +4,7 @@ using namespace std;
 void printFibonacci(int n) {
     int temp1 = 0, temp2 = 1, result = 0;
     
-    if(n >= 0) cout << temp1 << " ";
+    if(n >= 1) cout << temp1 << " ";
     if(n >= 2) cout << temp2 << " ";
    
      
