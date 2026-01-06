@@ -9,7 +9,7 @@ int findSecondLargestElement(int a[], int size) {
             secondLargest = largest;
             largest = a[i];
         }
-        else if(secondLargest < a[i] && secondLargest < largest && a[i] != largest) {
+        else if(secondLargest < a[i] && a[i] != largest) {
             secondLargest = a[i];
         }
     }
@@ -18,7 +18,7 @@ int findSecondLargestElement(int a[], int size) {
 }
 
 int main() {
-    int arr[] = {1, 2, 3, 45, 6};
+    int arr[] = {1, 2, 3, 45, 6, 7};
     int size = sizeof(arr) / sizeof(arr[0]);
     
     cout << findSecondLargestElement(arr, size);
