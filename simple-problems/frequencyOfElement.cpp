@@ -20,7 +20,7 @@ void frequencyOfElement(int arr[], int size) {
 
 
 int main() {
-    int arr[] = {1, 2, 3, 4, 200, 1, 2, 1, 2};
+    int arr[] = {1, 2, 3, 4, 200, 1, 2, 1, 2, 1};
     
     int size = sizeof(arr) / sizeof(arr[0]);
     
