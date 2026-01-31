@@ -2,7 +2,6 @@
 using namespace std;
 
 void sortArray(int *arr, int size) {
-    int iteration = 0;
   for(int i = 0; i < size - i; i++) {
       for(int j = 0; j < size - 1 - i; j++) {
           if(*(arr + j) > *(arr + j + 1)) {
@@ -14,7 +13,6 @@ void sortArray(int *arr, int size) {
            iteration++;
       }
   }
-  cout << iteration << endl;
 }
 
 int main() {
