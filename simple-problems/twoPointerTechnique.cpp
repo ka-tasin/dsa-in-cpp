@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-bool findSum(vector<int> vec, int target) {
+bool findSum(vector<int>& vec, int target) {
     int left = 0, right = vec.size() - 1;
     while(left < right) {
         int sum = vec[left] + vec[right];
