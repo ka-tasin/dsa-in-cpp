@@ -31,6 +31,9 @@ int main() {
     r1.length = 1.3;
     r1.width = 3.4;
     
+    cout << r1.area() << endl; 
+    cout << r1.perimeter() << endl; 
+    
     Display result = r1.display();
     cout << result.area << endl;
     cout << result.perimeter;
