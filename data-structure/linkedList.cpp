@@ -1,3 +1,4 @@
+// Online C++ compiler to run C++ program online
 #include <iostream>
 using namespace std;
 
@@ -46,12 +47,35 @@ class LinkedList {
             cout << "Inserted " << value << " at end!" << endl;
 
         }
+        
+        void printList() {
+            if(head == nullptr) {
+                cout << "List is empty.";
+                return;
+            }
+            
+            Node* current = head;
+            while(current != nullptr) {
+                cout << current->data;
+                if(current->next != nullptr) {
+                    cout << " -> ";
+                }
+                current = current->next;
+                
+            }
+        }
 };
 
 int main() {
     LinkedList list;
     list.insertAtStart(10);
-    list.insertAtEnd(20);
+    list.insertAtEnd(20);    
+    list.insertAtEnd(30);
+    list.insertAtEnd(40);
+    list.insertAtStart(1);
+
+
+    list.printList();
     
 
     return 0;
