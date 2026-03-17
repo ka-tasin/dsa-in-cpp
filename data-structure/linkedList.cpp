@@ -61,6 +61,16 @@ class LinkedList {
 
     }
     
+    int countNodes() {
+        int count = 0;
+        Node* current = head;
+        while(current != nullptr) {
+            count++;
+            current = current->next;
+        }
+        return count;
+    }
+    
     ~LinkedList() {
         Node* current = head;
         while(current != nullptr) {
@@ -81,9 +91,10 @@ int main() {
     list.insertAtEnd(40);
     list.insertAtBeginning(20);
     list.insertAtEnd(50);
-
     
     list.printList();
+    
+    cout << "List Length: " << list.countNodes() << endl;
 
     return 0;
 }
