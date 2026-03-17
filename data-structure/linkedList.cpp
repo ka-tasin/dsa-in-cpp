@@ -88,8 +88,11 @@ int main() {
     list.printList();
      
     list.insertAtBeginning(10);
+    list.printList();
     list.insertAtEnd(40);
+    list.printList();
     list.insertAtBeginning(20);
+    list.printList();
     list.insertAtEnd(50);
     
     list.printList();
