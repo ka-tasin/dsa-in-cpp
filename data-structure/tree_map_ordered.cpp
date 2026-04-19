@@ -10,13 +10,16 @@ int main()
     
     for(int i = 0; i < n; i++) {
       cin >> arr[i];
-      cout << arr[i];
     }
     
     map<int, int> map;
     
     for(int i = 0; i < n; i++) {
       map[arr[i]]++;
+    }
+    
+    for(auto it: map) {
+      cout << it.first << "->" << it.second << endl;
     }
     
     int q; 
