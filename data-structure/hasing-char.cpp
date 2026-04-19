@@ -27,6 +27,15 @@ int main()
       cout << hash[c -'a'] << endl;
       q--;
     }
-    
-    
 }
+
+/**
+11
+a b c d g a s c d b a
+5
+a 
+b
+d
+g
+z
+*/
