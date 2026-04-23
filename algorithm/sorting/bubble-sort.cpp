@@ -1,27 +1,65 @@
-#include <iostream>
+// O(n) - Optimized
+#include <bits/stdc++.h>
 using namespace std;
 
-void bubleSort(int arr[], int size) {
-    for(int i = 0; i < size; i++) {
-        for(int j = 0; j < size - i - 1; j++) {
-            if(arr[j] > arr[j + 1]) {
+void bubble_sort(int arr[], int n) {
+    for(int i = 0; i < n; i++) {
+        bool swap = false; // Optimization
+        for(int j = 0; j < n - i - 1; j++) {
+            if(arr[j] > arr[j+1]) {
                 int temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;   
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+                
+                swap = true; // Optimization 
+            }
+            
+        }
+        if(!swap) break; 
+        cout << "runs\n";
+    }
+}
+
+int main() {
+	int n;
+	cin >> n;
+	int arr[n];
+	
+	for(int i = 0; i < n; i++) cin >> arr[i];
+	
+	bubble_sort(arr, n);
+	
+	for(int i = 0; i < n; i++) cout << arr[i] << " ";
+
+}
+
+
+
+// O(n^2) - Not Optimized
+#include <bits/stdc++.h>
+using namespace std;
+
+void bubble_sort(int arr[], int n) {
+    for(int i = 0; i < n - 1; i++) {
+        for(int j = 0; j < n - i - 1; j++) {
+            if(arr[j] > arr[j+1]) {
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
             }
         }
     }
-    for(int i = 0; i < size; i++) {
-        cout << arr[i];
-        if(i < size - 1) cout << ", ";
-    }
 }
-int main() {
-    int arr[] = {34, 3, 56, 4, 200, 55};
-    
-    int size = sizeof(arr) / sizeof(arr[0]);
-    
-    bubleSort(arr, size);
 
-    return 0;
+int main() {
+	int n;
+	cin >> n;
+	int arr[n];
+	
+	for(int i = 0; i < n; i++) cin >> arr[i];
+	
+	bubble_sort(arr, n);
+	
+	for(int i = 0; i < n; i++) cout << arr[i] << " ";
+
 }
