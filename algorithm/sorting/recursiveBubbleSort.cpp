@@ -19,7 +19,6 @@ void recursiveBubbleSort(vector<int>& arr, int n) {
 }
 
 int main() {
-	// Test 1: Already sorted
     vector<int> arr = {3, 9, 2, 7, 1};
 
     recursiveBubbleSort(arr, arr.size());
